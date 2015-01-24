@@ -1,0 +1,10 @@
+# eclipse configure files
+.classpath
+.project
+
+# eclipse settings folder
+.settings/
+
+# java classes folder
+classes/
+bin/
