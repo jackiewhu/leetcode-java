@@ -22,8 +22,16 @@ public abstract class AbstractLargestNumberTest {
 	}
 	
 	@Test
-	public final void testTwoZeroLargestNumber() {
+	public final void testZeroLargestNumber() {
 		testNums = new int[]{0, 0};
+		
+		assertEquals("0", largestNum.largestNumber(testNums));
+		
+		testNums = new int[]{0, 0, 1};
+		
+		assertEquals("100", largestNum.largestNumber(testNums));
+		
+		testNums = new int[]{0, 0, 0};
 		
 		assertEquals("0", largestNum.largestNumber(testNums));
 		
@@ -34,6 +42,12 @@ public abstract class AbstractLargestNumberTest {
 		testNums = new int[]{1};
 		
 		assertEquals("1", largestNum.largestNumber(testNums));
+	}
+	
+	public final void testBigIntLargestNumber() {
+		testNums = new int[]{999999998,999999997,999999999};
+		
+		assertEquals("999999999999999998999999997", largestNum.largestNumber(testNums));
 	}
 
 }
