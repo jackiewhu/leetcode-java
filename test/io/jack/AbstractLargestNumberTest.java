@@ -44,6 +44,7 @@ public abstract class AbstractLargestNumberTest {
 		assertEquals("1", largestNum.largestNumber(testNums));
 	}
 	
+	@Test
 	public final void testBigIntLargestNumber() {
 		testNums = new int[]{999999998,999999997,999999999};
 		
