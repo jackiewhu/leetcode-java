@@ -8,3 +8,7 @@
 # java classes folder
 classes/
 bin/
+
+git-push-all.sh
+
+.gitignore~
