@@ -15,4 +15,6 @@ build/
 
 git-push-all.sh
 
-.gitignore~
+# any backup files end with ~
+*~
+*~.*
