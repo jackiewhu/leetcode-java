@@ -9,6 +9,10 @@
 classes/
 bin/
 
+# output folder
+target/
+build/
+
 git-push-all.sh
 
 .gitignore~

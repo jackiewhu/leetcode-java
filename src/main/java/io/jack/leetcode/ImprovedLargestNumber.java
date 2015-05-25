@@ -1,4 +1,4 @@
-package io.jack;
+package io.jack.leetcode;
 
 public class ImprovedLargestNumber extends AbstractLargestNumber {
 

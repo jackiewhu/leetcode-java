@@ -1,4 +1,4 @@
-package io.jack;
+package io.jack.leetcode;
 
 public abstract class AbstractLargestNumber {
 

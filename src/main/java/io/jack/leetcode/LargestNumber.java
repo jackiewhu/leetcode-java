@@ -1,4 +1,4 @@
-package io.jack;
+package io.jack.leetcode;
 
 import java.util.Arrays;
 import java.util.Comparator;
