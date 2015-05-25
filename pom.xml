@@ -49,10 +49,10 @@
            <id>pre_package</id>
            <phase>prepare-package</phase>
            <configuration>
-             <failsOnError>true</failsOnError>
+             <failsOnError>false</failsOnError>
            </configuration>
            <goals>
-             <goal>check</goal>
+             <goal>checkstyle</goal>
            </goals>
          </execution>
        </executions>

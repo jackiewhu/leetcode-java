@@ -1,9 +1,13 @@
+branches:
+  only:
+    - master
+    - /.*travis.*/
+
 language: java
 
 jdk:
-  - openjdk6
   - openjdk7
-  - oraclejdk8
+  - oraclejdk7
 
 after_success:
   - mvn clean cobertura:cobertura coveralls:report
