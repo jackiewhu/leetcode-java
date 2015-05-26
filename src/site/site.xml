@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.6.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd"
+  name="Leetcode in Java Version">
+
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.3.1</version>
+  </skin>
+
+  <version position="right" />
+  <publishDate position="right" />
+
+  <bannerLeft>
+    <name>leetcode-java</name>
+    <src>http://maven.apache.org/images/apache-maven-project.png</src>
+    <href>http://www.apache.org</href>
+  </bannerLeft>
+
+  <body>
+    <breadcrumbs>
+      <item name="Maven" href="http://maven.apache.org" />
+      <item name="Jack" href="http://github.com/jacktan1991" />
+      <item name="Leetcode Java" href="./" />
+    </breadcrumbs>
+    <menu name="OVERVIEW">
+      <item name="Introduction" href="#" />
+      <item name="Usage" href="#" />
+      <item name="FAQ" href="#" />
+      <item name="License" href="http://www.apache.org/licenses/" />
+    </menu>
+    <menu ref="reports" />
+  </body>
+
+  <custom>
+    <fluidoSkin>
+      <!----><leftColumnClass>span2</leftColumnClass>
+      <bodyColumnClass>span10</bodyColumnClass>
+      <sideBarEnabled>true</sideBarEnabled>
+      <navBarEnabled>true</navBarEnabled>
+      <topBarEnabled>true</topBarEnabled>
+      <topBarContainerStyle>width: 90%;</topBarContainerStyle>
+      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+      <copyrightClass>pull-right</copyrightClass>
+      <breadcrumbDivider>»</breadcrumbDivider>
+      <gitHub>
+        <projectId>jacktan1991/leetcode-java</projectId>
+        <ribbonOrientation>right</ribbonOrientation>
+        <ribbonColor>orange</ribbonColor>
+      </gitHub>
+    </fluidoSkin>
+  </custom>
+</project>
