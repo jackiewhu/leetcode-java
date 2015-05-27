@@ -9,6 +9,10 @@ jdk:
   - openjdk7
   - oraclejdk7
 
+before_script:
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
+
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V
 
