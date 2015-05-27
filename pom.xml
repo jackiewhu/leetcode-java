@@ -73,6 +73,29 @@
   </dependencies>
 
   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.marvinformatics.formatter</groupId>
+          <artifactId>formatter-maven-plugin</artifactId>
+          <version>1.4.0</version>
+          <configuration>
+            <configFile>formatter-profile.xml</configFile>
+            <configJsFile>formatter-profile.xml</configJsFile>
+            <encoding>UTF-8</encoding>
+            <lineEnding>CRLF</lineEnding>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>format</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -93,10 +116,10 @@
            <id>pre_package</id>
            <phase>prepare-package</phase>
            <configuration>
-             <failsOnError>false</failsOnError>
+             <failsOnError>true</failsOnError>
            </configuration>
            <goals>
-             <goal>checkstyle</goal>
+             <goal>check</goal>
            </goals>
          </execution>
        </executions>
