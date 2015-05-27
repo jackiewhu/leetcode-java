@@ -12,5 +12,9 @@ jdk:
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V
 
-after_success:
-  - mvn clean site cobertura:cobertura coveralls:report -DrepoToken=hQToEwIx24QJxxqqsXjfsXGYb111VYw2R
+save_reports:
+  - mvn cobertura:cobertura
+  - mvn surefire:report
+
+after_script:
+  - mvn clean cobertura:cobertura coveralls:report
