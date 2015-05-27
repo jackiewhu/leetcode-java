@@ -13,9 +13,5 @@ install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V
 
 after_success:
-  - mvn clean cobertura:cobertura coveralls:report
-
-after_script:
-  - mvn clean 
-  - mvn cobertura:cobertura
-  - mvn surefire:report
+   - mvn clean cobertura:cobertura
+   - mvn test
