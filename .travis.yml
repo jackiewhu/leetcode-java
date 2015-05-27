@@ -3,6 +3,12 @@ branches:
     - master
     - /.*travis.*/
 
+env
+  global:
+    - secure: l5z8tiS6wvRGWsMoNrUkEoNsjHnRwc3Ny5xpkqfdyog5XtlKY42A/q5ArXnR89Ac3hWpASGIn/luwrGAu91Me4zlsVyumUONqVZEIGEmuwS/9em3dWeA0CsypVJlyYMvOMjmDCSEWf8P6cj9Dd8wTrinel51IPuzfZkddL6OsEsMaKqBLIcXf/99MAbOrBR31r7AYWdVN5yQ3dyFCMJSOv+z9v2eFhykoI7boEco21WKK380oKGNsTYoQIX3duO7h4psU6wCCFkwFfuEzsgwhqqpPn+dPOC3SSnKAwlJxwiJ+ycwyPIew3G/kybGIoAd1Gm2xg0Txx4hAbfwo86mqQ==
+  matrix:
+    - secure: l5z8tiS6wvRGWsMoNrUkEoNsjHnRwc3Ny5xpkqfdyog5XtlKY42A/q5ArXnR89Ac3hWpASGIn/luwrGAu91Me4zlsVyumUONqVZEIGEmuwS/9em3dWeA0CsypVJlyYMvOMjmDCSEWf8P6cj9Dd8wTrinel51IPuzfZkddL6OsEsMaKqBLIcXf/99MAbOrBR31r7AYWdVN5yQ3dyFCMJSOv+z9v2eFhykoI7boEco21WKK380oKGNsTYoQIX3duO7h4psU6wCCFkwFfuEzsgwhqqpPn+dPOC3SSnKAwlJxwiJ+ycwyPIew3G/kybGIoAd1Gm2xg0Txx4hAbfwo86mqQ==
+
 language: java
 
 jdk:
