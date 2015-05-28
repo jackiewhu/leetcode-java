@@ -17,6 +17,7 @@ before_install:
   - mvn -v
 
 install:
+  - mvn -v
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V
 
 after_success:
