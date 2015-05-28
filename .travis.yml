@@ -12,7 +12,7 @@ jdk:
 before_install:
   - wget http://www.us.apache.org/dist/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz -O /tmp/apache-maven.tar.gz
   - tar -xvf /tmp/apache-maven.tar.gz
-  - export PATH=$PWD/apache-maven-3.3.3/bin/:$PATH
+  - export PATH=$PATH:$PWD/apache-maven-3.3.3/bin/
   - mvn -v
 
 install:
