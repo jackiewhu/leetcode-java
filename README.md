@@ -8,3 +8,10 @@ leetcode of java version
 
 ## leetcode homepage
 http://oj.leetcode.com/problems/
+
+## Building
+
+### Requirements
+
+* [Maven](http://maven.apache.org) 3.3.1+
+* [Java](http://java.sun.com/) 7+

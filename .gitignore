@@ -18,3 +18,6 @@ git-push-all.sh
 # any backup files end with ~
 *~
 *~.*
+
+# tempt file when building with pom.yml
+.polyglot.pom.yml

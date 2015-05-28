@@ -1,0 +1,138 @@
+artifactId: leetcode-java
+build:
+  pluginManagement:
+    plugins:
+    - artifactId: formatter-maven-plugin
+      configuration: {configFile: formatter-profile.xml, configJsFile: formatter-profile.xml,
+        encoding: UTF-8, lineEnding: CRLF}
+      executions:
+      - goals: [format]
+        id: default
+        inherited: true
+        priority: 0
+      extensions: false
+      groupId: com.marvinformatics.formatter
+      inherited: true
+      version: 1.4.0
+    - artifactId: polyglot-translate-plugin
+      configuration: {input: pom.xml, output: pom.yml}
+      extensions: false
+      groupId: io.takari.polyglot
+      inherited: true
+      version: 0.1.10
+  plugins:
+  - artifactId: maven-compiler-plugin
+    configuration: {source: '1.7', target: '1.7'}
+    extensions: false
+    groupId: org.apache.maven.plugins
+    inherited: true
+    version: '3.3'
+  - artifactId: maven-checkstyle-plugin
+    executions:
+    - configuration: {failsOnError: 'true'}
+      goals: [check]
+      id: pre_package
+      inherited: true
+      phase: prepare-package
+      priority: 0
+    extensions: false
+    groupId: org.apache.maven.plugins
+    inherited: true
+    version: ${checkstyle.version}
+ciManagement: {system: Travis CI, url: 'https://travis-ci.org/jacktan1991/leetcode-java'}
+contributors:
+- {name: Jack Tan}
+dependencies:
+- {artifactId: junit, groupId: junit, optional: false, scope: test, type: jar, version: '${junit.version}'}
+description: leetcode of java version
+developers:
+- email: 792626757@qq.com
+  id: jackie
+  name: Jack Tan
+  roles: [Administrator, Java Developer]
+  timezone: '8'
+groupId: io.jack.leetcode
+inceptionYear: '2014'
+issueManagement: {system: Github Issues, url: 'https://github.com/jacktan1991/leetcode-java/issues'}
+licenses:
+- {name: 'Apache License, Version 2.0', url: 'http://www.apache.org/licenses/LICENSE-2.0.txt'}
+mailingLists:
+- {name: Jack Tan, post: 792626757@qq.com}
+modelVersion: 4.0.0
+name: leetcode-java
+packaging: jar
+profiles:
+- activation:
+    activeByDefault: false
+    property: {name: env.TRAVIS, value: 'true'}
+  build:
+    plugins:
+    - artifactId: cobertura-maven-plugin
+      configuration:
+        formats: {format: xml}
+      extensions: false
+      groupId: org.codehaus.mojo
+      inherited: true
+      version: '2.7'
+    - {artifactId: coveralls-maven-plugin, extensions: false, groupId: org.eluder.coveralls,
+      inherited: true, version: 3.1.0}
+  id: travis
+  source: pom
+properties: {checkstyle.version: '2.15', project.build.sourceEncoding: UTF-8, junit.version: 4.8.2,
+  checkstyle.config.location: checkstyle.xml}
+reporting:
+  excludeDefaults: false
+  plugins:
+  - {artifactId: maven-project-info-reports-plugin, groupId: org.apache.maven.plugins,
+    inherited: true, version: '2.8'}
+  - artifactId: maven-javadoc-plugin
+    configuration: {quiet: 'true'}
+    groupId: org.apache.maven.plugins
+    inherited: true
+    reportSets:
+    - id: default
+      inherited: true
+      reports: [javadoc]
+    version: 2.10.3
+  - {artifactId: maven-jxr-plugin, groupId: org.apache.maven.plugins, inherited: true,
+    version: '2.5'}
+  - artifactId: maven-surefire-report-plugin
+    groupId: org.apache.maven.plugins
+    inherited: true
+    reportSets:
+    - id: default
+      inherited: true
+      reports: [report-only]
+    version: 2.18.1
+  - artifactId: cobertura-maven-plugin
+    groupId: org.codehaus.mojo
+    inherited: true
+    reportSets:
+    - id: default
+      inherited: true
+      reports: [cobertura]
+    version: '2.7'
+  - artifactId: maven-checkstyle-plugin
+    groupId: org.apache.maven.plugins
+    inherited: true
+    reportSets:
+    - id: default
+      inherited: true
+      reports: [checkstyle]
+    version: ${checkstyle.version}
+  - artifactId: maven-pmd-plugin
+    configuration:
+      targetJdk: '1.7'
+      rulesets: {ruleset: /rulesets/java/unnecessary.xml}
+    groupId: org.apache.maven.plugins
+    inherited: true
+    version: '3.4'
+  - artifactId: findbugs-maven-plugin
+    configuration: {threshold: High, effort: Default, xmlOutput: 'true', xmlOutputDirectory: '${project.build.directory}/site'}
+    groupId: org.codehaus.mojo
+    inherited: true
+    version: 3.0.0
+scm: {connection: 'scm:git:https://github.com/jacktan1991/leetcode-java.git', developerConnection: 'scm:git:git@github.com:jacktan1991/leetcode-java.git',
+  tag: HEAD, url: 'http://github.com/jacktan1991/leetcode-java'}
+url: https://github.com/jacktan1991/leetcode-java
+version: 1.0-SNAPSHOT
