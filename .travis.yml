@@ -4,7 +4,7 @@ branches:
     - /.*travis.*/
 
 language: java
-http://www.us.apache.org/dist/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
+
 jdk:
   - openjdk7
   - oraclejdk7
