@@ -19,3 +19,6 @@ install:
 after_success:
    - mvn clean cobertura:cobertura
    - mvn test
+
+addons:
+  artifacts: true
